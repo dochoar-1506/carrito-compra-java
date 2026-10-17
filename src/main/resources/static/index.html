@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="contenedor">
+        <h1>🛒 Carrito de Compras</h1>
+        <p>Sistema de compras desarrollado con Java Spring Boot</p>
+    </div>
+</header>
+
+<main class="contenedor">
+
+    <section class="panel">
+        <h2>Catálogo de productos</h2>
+        <p>Selecciona los productos que deseas agregar a tu carrito.</p>
+        <div id="productos" class="productos">
+            Cargando productos...
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Mi carrito</h2>
+
+        <div class="usuario">
+            <label for="codUsuario">Código de usuario:</label>
+            <input
+                type="text"
+                id="codUsuario"
+                value="USUARIO01"
+                maxlength="128"
+                placeholder="Escribe tu usuario"
+            >
+            <button id="btnCargar" type="button">Cargar carrito</button>
+        </div>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Código</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="detalleCarrito">
+                    <tr>
+                        <td colspan="6">Cargando carrito...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="resumen">
+            <h3>Total de compra: <span id="total">Q 0.00</span></h3>
+            <button id="btnVaciar" class="peligro" type="button">
+                Vaciar carrito
+            </button>
+        </div>
+
+        <div id="mensaje" class="mensaje" role="status" aria-live="polite"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Proyecto de migración de PHP a Java Spring Boot</p>
+    <p>API REST · MySQL · HTML · CSS · JavaScript</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
